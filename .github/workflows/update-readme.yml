@@ -34,7 +34,11 @@ jobs:
           git add README.md
           if ! git diff --cached --quiet; then
             git commit -m "chore: auto-update README with latest solutions"
+            # Добавляем токен в URL для пуша
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
             git push
           else
             echo "No changes to README."
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
