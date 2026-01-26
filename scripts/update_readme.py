@@ -10,7 +10,7 @@ GRAPHQL_URL = 'https://leetcode.com/graphql'
 
 
 def fetch_full_problems_cache():
-    '''Забирает ВСЕ задачи с LeetCode постранично и сохраняет в кэш.'''
+    """Забирает ВСЕ задачи с LeetCode постранично и сохраняет в кэш."""
     print('Get all LeetCode problems...')
     all_questions = []
     skip = 0
@@ -62,20 +62,22 @@ def fetch_full_problems_cache():
 
 
 def load_problems_cache():
-    '''Загружает кэш или создаёт новый (полный).'''
+    """Загружает кэш или создаёт новый (полный)."""
     if Path(CACHE_FILE).exists():
         with open(CACHE_FILE, 'r') as f:
             return json.load(f)
     return fetch_full_problems_cache()
 
-
 def extract_problem_number(file_name: str) -> int | None:
-    '''Извлекает номер задачи из имени файла.'''
-    if not file_name.endswith('.py'):
+    """Извлекает номер задачи из имени файла."""
+    if not file_name.endswith('.py') or not file_name[:-3].replace('_', '').isdigit():
+        return None
+    parts = file_name[:-3].split('_')
+    if not parts:
         return None
     try:
-        return int(file_name.split('_')[0])
-    except (ValueError, IndexError):
+        return int(parts[-1])
+    except ValueError:
         return None
 
 
