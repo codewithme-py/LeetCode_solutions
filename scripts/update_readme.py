@@ -70,15 +70,12 @@ def load_problems_cache():
 
 def extract_problem_number(file_name: str) -> int | None:
     """Извлекает номер задачи из имени файла."""
-    if not file_name.endswith('.py') or not file_name[:-3].replace('_', '').isdigit():
+    if not file_name.endswith('.py'):
         return None
-    parts = file_name[:-3].split('_')
-    if not parts:
-        return None
-    try:
-        return int(parts[-1])
-    except ValueError:
-        return None
+    match = re.search(r'(\d+)(?=_*\.py$)', file_name)
+    if match:
+        return int(match.group(1))
+    return None
 
 
 def main():
