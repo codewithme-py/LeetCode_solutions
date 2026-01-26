@@ -1,0 +1,39 @@
+name: Auto-update README
+
+on:
+  push:
+    paths:
+      - 'solutions/*.py'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-dev.txt
+
+      - name: Generate README
+        run: python scripts/update_readme.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-update README with latest solutions"
+            git push
+          else
+            echo "No changes to README."
+          fi
