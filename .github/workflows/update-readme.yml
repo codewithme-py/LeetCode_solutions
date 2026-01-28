@@ -2,6 +2,7 @@ name: Auto-update README
 
 on:
   push:
+    branches: [main]
     paths:
       - 'solutions/*.py'
 
