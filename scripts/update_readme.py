@@ -146,7 +146,7 @@ def main():
         table_md = '| — | — | — | — |'
 
     table_with_details = (
-        f'<details>\n<summary><b> Show all solved problems ({total_solved})</b></summary>\n'
+        f'<details>\n<summary><b> Show all solved problems </b></summary>\n\n'
         '## Problems\n\n'
         '| # | Title | Difficulty | Solution |\n'
         '|---|-------|------------|----------|\n'
