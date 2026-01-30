@@ -1,12 +1,10 @@
-from typing import List
-
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        """Возвращает индексы двух чисел из nums, сумма которых равна target.
-        Работает за O(n): проходит по списку один раз, запоминая числа
-        и их позиции в словаре. Для каждого элемента проверяет,
-        было ли уже число (target - текущее). Если да — возвращает пару индексов.
-        Гарантируется, что решение существует и уникально.
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        """Return indices of the two numbers in `nums` that add up to `target`.
+        Runs in O(n) time: traverses the list once, storing each number and its index
+        in a dictionary. For each element, checks if the complement (`target - current`)
+        has already been seen. If so, returns the pair of indices.
+        Assumes exactly one valid solution exists.
         """
         seen = {}
         for index, num in enumerate(nums):

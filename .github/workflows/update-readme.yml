@@ -7,7 +7,42 @@ on:
       - 'solutions/*.py'
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -e .[dev]
+
+      - name: Run Ruff linter
+        run: ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -e .[dev]
+
+      - name: Run tests
+        run: pytest
+
   update-readme:
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,14 +51,13 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           persist-credentials: true
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements-dev.txt
+        run: pip install -e .[dev]
 
       - name: Generate README
         run: python scripts/update_readme.py
@@ -35,11 +69,7 @@ jobs:
           git add README.md
           if ! git diff --cached --quiet; then
             git commit -m "chore: auto-update README with latest solutions"
-            # Добавляем токен в URL для пуша
-            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
             git push
           else
             echo "No changes to README."
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}

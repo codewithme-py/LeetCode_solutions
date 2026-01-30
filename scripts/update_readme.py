@@ -1,12 +1,17 @@
-# flake8: noqa
-# !/usr/bin/env python3
+# ruff: noqa: E501, UP015
+#!/usr/bin/env python3
 import json
 import re
+from collections import Counter
 from pathlib import Path
+
 import requests
 
-CACHE_FILE = 'problems_cache.json'
+SCRIPT_DIR = Path(__file__).parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+CACHE_FILE = PROJECT_ROOT / 'problems_cache.json'
 GRAPHQL_URL = 'https://leetcode.com/graphql'
+LEETCODE_BASE_URL = 'https://leetcode.com/problems'
 
 
 def fetch_full_problems_cache():
@@ -63,10 +68,11 @@ def fetch_full_problems_cache():
 
 def load_problems_cache():
     """Загружает кэш или создаёт новый (полный)."""
-    if Path(CACHE_FILE).exists():
+    if CACHE_FILE.exists():
         with open(CACHE_FILE, 'r') as f:
             return json.load(f)
     return fetch_full_problems_cache()
+
 
 def extract_problem_number(file_name: str) -> int | None:
     """Извлекает номер задачи из имени файла."""
@@ -78,14 +84,22 @@ def extract_problem_number(file_name: str) -> int | None:
     return None
 
 
+def make_bar(value: int, max_val: int, width: int = 10) -> str:
+    """Генерирует текстовый прогресс-бар из эмодзи."""
+    if max_val == 0:
+        filled = 0
+    else:
+        filled = min(width, max(0, int((value / max_val) * width)))
+    return '█' * filled + '░' * (width - filled)
+
+
 def main():
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    solutions_dir = project_root / 'solutions'
-    readme_path = project_root / 'README.md'
+    solutions_dir = PROJECT_ROOT / 'solutions'
+    readme_path = PROJECT_ROOT / 'README.md'
     problems = load_problems_cache()
+
     solved_files = []
-    stats = {'Easy': 0, 'Medium': 0, 'Hard': 0}
+    solved_stats = {'Easy': 0, 'Medium': 0, 'Hard': 0}
     if solutions_dir.exists():
         for f in solutions_dir.iterdir():
             if f.is_file():
@@ -93,27 +107,47 @@ def main():
                 if num and str(num) in problems:
                     title, difficulty = problems[str(num)]
                     solved_files.append((num, title, difficulty, f.name))
-                    stats[difficulty] += 1
+                    solved_stats[difficulty] += 1
+
     solved_files.sort(key=lambda x: x[0])
-    total = sum(stats.values())
+    total_solved = sum(solved_stats.values())
+
+    counter = Counter(info[1] for info in problems.values())
+    total_stats = {
+        'Easy': counter['Easy'],
+        'Medium': counter['Medium'],
+        'Hard': counter['Hard']
+    }
+
+    easy_bar = make_bar(solved_stats['Easy'], total_stats['Easy'])
+    medium_bar = make_bar(solved_stats['Medium'], total_stats['Medium'])
+    hard_bar = make_bar(solved_stats['Hard'], total_stats['Hard'])
+
+    easy_pct = (solved_stats['Easy'] / total_stats['Easy'] * 100) if total_stats['Easy'] else 0
+    medium_pct = (solved_stats['Medium'] / total_stats['Medium'] * 100) if total_stats['Medium'] else 0
+    hard_pct = (solved_stats['Hard'] / total_stats['Hard'] * 100) if total_stats['Hard'] else 0
+
+    stats_md = (
+        f'✅ **Total**: **{total_solved}**  \n'
+        f'🟢 **Easy**: {solved_stats["Easy"]} &nbsp; `{easy_bar}` &nbsp; _({easy_pct:.1f}%)_  \n'
+        f'🟡 **Medium**: {solved_stats["Medium"]} &nbsp; `{medium_bar}` &nbsp; _({medium_pct:.1f}%)_  \n'
+        f'🔴 **Hard**: {solved_stats["Hard"]} &nbsp; `{hard_bar}` &nbsp; _({hard_pct:.1f}%)_'
+    )
+
     if solved_files:
         table_rows = []
         for num, title, difficulty, file_name in solved_files:
-            leetcode_url = f'https://leetcode.com/problems/{title.lower().replace(" ", "-")}/'
+            leetcode_url = f'{LEETCODE_BASE_URL}/{title.lower().replace(" ", "-")}/'
             table_rows.append(
                 f'| {num} | [{title}]({leetcode_url}) | {difficulty} | [`{file_name}`](solutions/{file_name}) |'
             )
         table_md = '\n'.join(table_rows)
     else:
         table_md = '| — | — | — | — |'
-    stats_md = (
-        f'- ✅ Solved: {total}\n'
-        f'- 🟢 Easy: {stats["Easy"]}\n'
-        f'- 🟡 Medium: {stats["Medium"]}\n'
-        f'- 🔴 Hard: {stats["Hard"]}'
-    )
+
     with open(readme_path, 'r') as f:
         content = f.read()
+
     content = re.sub(
         r'(<!-- START_STATS -->\n).*?(<!-- END_STATS -->)',
         f'<!-- START_STATS -->\n{stats_md}\n<!-- END_STATS -->',
@@ -126,9 +160,10 @@ def main():
         content,
         flags=re.DOTALL
     )
+
     with open(readme_path, 'w') as f:
         f.write(content)
-    print(f'Updated README with {total} solved problems.')
+    print(f'Updated README with {total_solved} solved problems.')
 
 
 if __name__ == '__main__':

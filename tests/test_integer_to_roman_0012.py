@@ -1,5 +1,6 @@
 from solutions.integer_to_roman_0012 import Solution
 
+
 def test_int_to_roman():
     sol = Solution()
     assert sol.intToRoman(3749) == "MMMDCCXLIX"

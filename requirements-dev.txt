@@ -1,4 +1,0 @@
-# requirements-dev.txt
-pytest>=8.0
-ruff>=0.4
-requests>=2.0

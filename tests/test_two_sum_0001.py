@@ -1,5 +1,6 @@
 from solutions.two_sum_0001 import Solution
 
+
 def test_two_sum():
     sol = Solution()
     assert sol.twoSum([2, 7, 11, 15], 9) == [0, 1]
