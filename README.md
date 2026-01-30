@@ -3,16 +3,16 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **5**  
-🟢 **Easy**: 4 &nbsp; `░░░░░░░░░░` &nbsp; _(0.4%)_  
+✅ **Total**: **6**  
+🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
 🟡 **Medium**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_  
 🔴 **Hard**: 0 &nbsp; `░░░░░░░░░░` &nbsp; _(0.0%)_
 <!-- END_STATS -->
 
 <!-- START_TABLE -->
-## Problems
 <details>
-<summary><b> Show all solved problems (4)</b>></summary>
+<summary><b> Show all solved problems (6)</b></summary>
+## Problems
 
 | # | Title | Difficulty | Solution |
 |---|-------|------------|----------|
@@ -20,7 +20,8 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | [`palindrome_number_0009.py`](solutions/palindrome_number_0009.py) |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | [`integer_to_roman_0012.py`](solutions/integer_to_roman_0012.py) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | [`roman_to_integer_0013.py`](solutions/roman_to_integer_0013.py) |
-
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | [`longest_common_prefix_0014.py`](solutions/longest_common_prefix_0014.py) |
+| 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | [`remove_duplicates_from_sorted_list_0083.py`](solutions/remove_duplicates_from_sorted_list_0083.py) |
 </details>
 <!-- END_TABLE -->
 
