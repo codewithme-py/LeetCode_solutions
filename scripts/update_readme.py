@@ -145,6 +145,15 @@ def main():
     else:
         table_md = '| — | — | — | — |'
 
+    table_with_details = (
+        f'<details>\n<summary><b> Show all solved problems ({total_solved})</b></summary>\n'
+        '## Problems\n\n'
+        '| # | Title | Difficulty | Solution |\n'
+        '|---|-------|------------|----------|\n'
+        f'{table_md}\n'
+        '</details>'
+    )
+
     with open(readme_path, 'r') as f:
         content = f.read()
 
@@ -156,7 +165,7 @@ def main():
     )
     content = re.sub(
         r'(<!-- START_TABLE -->\n).*?(<!-- END_TABLE -->)',
-        f'<!-- START_TABLE -->\n## Problems\n| # | Title | Difficulty | Solution |\n|---|-------|------------|----------|\n{table_md}\n<!-- END_TABLE -->',
+        f'<!-- START_TABLE -->\n{table_with_details}\n<!-- END_TABLE -->',
         content,
         flags=re.DOTALL
     )
