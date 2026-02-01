@@ -5,13 +5,14 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 <!-- START_STATS -->
 ✅ **Total**: **6**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
-🟡 **Medium**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_  
+🟡 **Medium**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.0%)_  
 🔴 **Hard**: 0 &nbsp; `░░░░░░░░░░` &nbsp; _(0.0%)_
 <!-- END_STATS -->
 
 <!-- START_TABLE -->
 <details>
-<summary><b> Show all solved problems (6)</b></summary>
+<summary><b> Show all solved problems </b></summary>
+
 ## Problems
 
 | # | Title | Difficulty | Solution |
@@ -33,24 +34,17 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 Этот репозиторий — не просто сборник решений, а **готовая среда для практики LeetCode** с автоматизацией и профессиональным workflow.
 
 ### 💡 Что получает клонировавший:
-- ✅ Все решения на **Python ^3.10** с type hints  
-- ✅ Тесты для каждой задачи (`pytest`)  
-- ✅ Автоматическая проверка стиля (`ruff`)  
-- ✅ Автообновляемый `README.md` с прогрессом и ссылками  
-- ✅ Готовая CI/CD-настройка через GitHub Actions  
+- ✅ Все решения на **Python ^3.10** с type hints
+- ✅ Тесты для каждой задачи (`pytest`)
+- ✅ Автоматическая проверка стиля (`ruff`)
+- ✅ Автоматическое создание /feat ветки, файлов проблемы и теста
+- ✅ Генерация файлов с контентом: условие задачи, сниппеты кода и примеры тестов (fetch from LeetCode API)
+- ✅ Автообновляемый `README.md` с прогрессом и ссылками
+- ✅ Интеллектуальное управление кэшем: автоматическое обновление раз в неделю или по требованию
+- ✅ Готовая CI/CD-настройка через GitHub Actions
 - ✅ Чёткая структура: `solutions/`, `tests/`, `scripts/`
 
 ⚠️ Для работы скрипта обновления README требуется интернет (запрос к LeetCode 'API' при первом запуске).
-
-⚠️ Именование файлов
-
-Номер задачи — 4 цифры с ведущими нулями — всегда в конце имени файла, после `_`.
-
-| Тип  | Шаблон | Обязательно? |
-|------|------|-------------|
-| Решение | {название_snake_case}_{NNNN}.py | Да (для парсинга номера) |
-| Тест | test_{название_snake_case}_{NNNN}.py | Желательно (для ясности), но достаточно test_{название_snake_case/или номер}.py |
-
 
 <hr>
 
@@ -60,19 +54,14 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 This repo provides a production-grade setup for LeetCode practice:
 - Typed, tested Python 3.10+ solutions
 - Automated README generation with progress bars
+- Automated creation of /feat branch, problem and test files
+- Automated generation of files with content: problem statement, code snippets, and test examples (fetch from LeetCode API)
+- Smart cache management: automatic weekly refresh or on-demand
 - Preconfigured CI (tests + linter) and CD (auto-update)
 - No manual work — just solve, commit, PR
 
 ⚠️ For proper README generation, internet access is required (to query LeetCode 'API' on first run).
 
-⚠️ Naming convention
-
-The problem number — 4 digits with leading zeros — always at the end of the filename, after _.
-
-| Type | Pattern | Required? |
-|------|-------|-----------|
-| Solution | {problem_name_snake_case}_{NNNN}.py | Yes (for number parsing) |
-| Test | test_{problem_name_snake_case}_{NNNN}.py | Recommended (for clarity), but enough to have test_{problem_name_snake_case/or number}.py |
 </details>
 
 <hr>
@@ -109,12 +98,30 @@ pip install -e .[dev]
 ```bash
 pytest && ruff check .
 ```
-#### 5. Создай токен GitHub и добавь его в Secrets репозитория
+
+#### 5. Используй скрипт обновления README (опционально)
+```bash
+python scripts/update_readme.py
+```
+Для принудительного обновления кэша задач используйте флаг `--force-refresh-cache`:
+```bash
+python scripts/update_readme.py --force-refresh-cache
+```
+
+- Кэш задач обновляется автоматически раз в неделю (от даты изменения файла problems_cache.json). Для принудительного обновления кэша задач используйте флаг --force-refresh-cache:
+
+#### 6. Создай токен GitHub и добавь его в Secrets репозитория
 1) https://github.com/settings/tokens → перейди по ссылке
 2) Generate new token (classic) → Note: `What’s this token for?` → Expiration: `your choice` → Scopes: `repo`+`workflow` → Generate token → Скопируй токен
 3) Repo LeetCode_solutions Settings → Secrets and variables → Actions → New repository secret с именем `GH_PAT` → Вставь токен → Add secret
 
-#### 6. Создавай новую feat/ветку → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
-1) Удаление веток опционально (в истории коммитов сохраняется вся инфа)
+#### 7. Используй скрипт → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
+
+```bash
+python3 scripts/create_problem.py <номер_задачи>
+```
+
+1) Скрипт создает новую **/feat** ветку, а так же файлы решения и тестов минимизируя рутину
+2) Удаление веток после **merge** опционально (в истории коммитов сохраняется вся инфа)
 </details>
 <hr>

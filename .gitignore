@@ -6,3 +6,5 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+problems_cache.json
+*.egg-info
