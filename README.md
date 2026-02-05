@@ -3,9 +3,9 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **6**  
+✅ **Total**: **7**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
-🟡 **Medium**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.0%)_  
+🟡 **Medium**: 2 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_  
 🔴 **Hard**: 0 &nbsp; `░░░░░░░░░░` &nbsp; _(0.0%)_
 <!-- END_STATS -->
 
@@ -18,6 +18,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | # | Title | Difficulty | Solution |
 |---|-------|------------|----------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | [`two_sum_0001.py`](solutions/two_sum_0001.py) |
+| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | [`add_two_numbers_0002.py`](solutions/add_two_numbers_0002.py) |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | [`palindrome_number_0009.py`](solutions/palindrome_number_0009.py) |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | [`integer_to_roman_0012.py`](solutions/integer_to_roman_0012.py) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | [`roman_to_integer_0013.py`](solutions/roman_to_integer_0013.py) |
