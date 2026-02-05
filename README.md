@@ -35,8 +35,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 ### 💡 Что получает клонировавший:
 - ✅ Все решения на **Python ^3.10** с type hints
-- ✅ Тесты для каждой задачи (`pytest`)
-- ✅ Автоматическая проверка стиля (`ruff`)
+- ✅ Пре-коммит-хук для запуска тестов (`pytest`) & (`ruff`)
 - ✅ Автоматическое создание /feat ветки, файлов проблемы и теста
 - ✅ Генерация файлов с контентом: условие задачи, сниппеты кода и примеры тестов (fetch from LeetCode API)
 - ✅ Автообновляемый `README.md` с прогрессом и ссылками
@@ -53,11 +52,12 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 This repo provides a production-grade setup for LeetCode practice:
 - Typed, tested Python 3.10+ solutions
+- Pre-commit hook for running tests (`pytest`) & (`ruff`)
 - Automated README generation with progress bars
 - Automated creation of /feat branch, problem and test files
 - Automated generation of files with content: problem statement, code snippets, and test examples (fetch from LeetCode API)
 - Smart cache management: automatic weekly refresh or on-demand
-- Preconfigured CI (tests + linter) and CD (auto-update)
+- Preconfigured CI and CD (auto-update)
 - No manual work — just solve, commit, PR
 
 ⚠️ For proper README generation, internet access is required (to query LeetCode 'API' on first run).
@@ -78,7 +78,7 @@ cd LeetCode_solutions
 
 #### 2. Создай и активируй виртуальное окружение
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 ```
 Linux/Mac
 ```bash
@@ -101,11 +101,11 @@ pytest && ruff check .
 
 #### 5. Используй скрипт обновления README (опционально)
 ```bash
-python scripts/update_readme.py
+python3 scripts/update_readme.py
 ```
 Для принудительного обновления кэша задач используйте флаг `--force-refresh-cache`:
 ```bash
-python scripts/update_readme.py --force-refresh-cache
+python3 scripts/update_readme.py --force-refresh-cache
 ```
 
 - Кэш задач обновляется автоматически раз в неделю (от даты изменения файла problems_cache.json). Для принудительного обновления кэша задач используйте флаг --force-refresh-cache:
@@ -118,7 +118,7 @@ python scripts/update_readme.py --force-refresh-cache
 #### 7. Используй скрипт → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
 
 ```bash
-python3 scripts/create_problem.py <номер_задачи>
+make problem <номер_задачи>
 ```
 
 1) Скрипт создает новую **/feat** ветку, а так же файлы решения и тестов минимизируя рутину

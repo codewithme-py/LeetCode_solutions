@@ -1,27 +1,28 @@
 [tool.ruff]
-target-version = "py310"
+target-version = 'py310'
 line-length = 88
 
 [tool.ruff.lint]
-select = ["E", "W", "F", "I", "UP", "C4"]
+select = ['E', 'W', 'F', 'I', 'UP', 'C4']
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-pythonpath = ["."]
+testpaths = ['tests']
+python_files = ['test_*.py']
+python_classes = ['Test*']
+python_functions = ['test_*']
+pythonpath = ['.']
 
 [project]
-name = "leetcode-solutions"
-version = "0.1.0"
-requires-python = ">=3.10"
+name = 'leetcode-solutions'
+version = '0.1.0'
+requires-python = '>=3.10'
 dependencies = [
-    "requests",
+    'requests',
+    'pre-commit'
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest",
-    "ruff",
+    'pytest',
+    'ruff',
 ]
