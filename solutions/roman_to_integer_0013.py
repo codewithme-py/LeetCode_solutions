@@ -1,6 +1,7 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        """Convert Roman numeral to integer.
+        """
+        Convert Roman numeral to integer.
         Handles subtractive notation (e.g. IV=4, IX=9).
         Assumes valid input per LeetCode constraints.
         Args:

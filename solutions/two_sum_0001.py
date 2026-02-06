@@ -1,6 +1,7 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        """Return indices of the two numbers in `nums` that add up to `target`.
+        """
+        Return indices of the two numbers in `nums` that add up to `target`.
         Runs in O(n) time: traverses the list once, storing each number and its index
         in a dictionary. For each element, checks if the complement (`target - current`)
         has already been seen. If so, returns the pair of indices.
