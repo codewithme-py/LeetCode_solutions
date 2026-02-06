@@ -1,5 +1,10 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        """
+        Find the length of the longest substring without repeating characters.
+        :param s: Input string
+        :return: Length of the longest substring without repeating characters
+        """
         if not s:
             return 0
         left_border, max_len = 0, 0

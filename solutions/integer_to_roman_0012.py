@@ -1,6 +1,7 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
-        """Convert integer to Roman numeral.
+        """
+        Convert integer to Roman numeral.
         Uses greedy algorithm with predefined value-symbol pairs including
         subtractive forms (IV, IX, XL, XC, CD, CM).
         Args:

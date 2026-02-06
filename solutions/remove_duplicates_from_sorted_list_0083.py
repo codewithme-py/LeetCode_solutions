@@ -6,7 +6,8 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: ListNode | None) -> ListNode | None:
-        """Remove all duplicates from a sorted linked list
+        """
+        Remove all duplicates from a sorted linked list
         (keep only one occurrence).
         """
         if not head:

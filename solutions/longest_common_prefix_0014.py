@@ -1,6 +1,7 @@
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
-        """Find the longest common prefix string
+        """
+        Find the longest common prefix string
         amongst an array of strings.
         """
         if not strs:

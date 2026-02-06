@@ -1,6 +1,7 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        """Check if integer is a palindrome without string conversion.
+        """
+        Check if integer is a palindrome without string conversion.
         Negative numbers and trailing-zero numbers (except 0) are non-palindromic.
         Uses O(1) space by reversing half the number.
         Args:
