@@ -3,9 +3,9 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **9**  
+✅ **Total**: **10**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
-🟡 **Medium**: 3 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_  
+🟡 **Medium**: 4 &nbsp; `░░░░░░░░░░` &nbsp; _(0.2%)_  
 🔴 **Hard**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_
 <!-- END_STATS -->
 
@@ -21,6 +21,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | [`add_two_numbers_0002.py`](solutions/add_two_numbers_0002.py) |
 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | [`longest_substring_without_repeating_characters_0003.py`](solutions/longest_substring_without_repeating_characters_0003.py) |
 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | [`median_of_two_sorted_arrays_0004.py`](solutions/median_of_two_sorted_arrays_0004.py) |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | [`longest_palindromic_substring_0005.py`](solutions/longest_palindromic_substring_0005.py) |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | [`palindrome_number_0009.py`](solutions/palindrome_number_0009.py) |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | [`integer_to_roman_0012.py`](solutions/integer_to_roman_0012.py) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | [`roman_to_integer_0013.py`](solutions/roman_to_integer_0013.py) |
