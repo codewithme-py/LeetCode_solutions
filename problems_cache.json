@@ -19148,5 +19148,40 @@
     "Longest Alternating Subarray After Removing At Most One Element",
     "Hard",
     "longest-alternating-subarray-after-removing-at-most-one-element"
+  ],
+  "4210": [
+    "Median of a Binary Search Tree Level",
+    "Medium",
+    "median-of-a-binary-search-tree-level"
+  ],
+  "4227": [
+    "Find Users with Persistent Behavior Patterns",
+    "Hard",
+    "find-users-with-persistent-behavior-patterns"
+  ],
+  "4214": [
+    "Count Dominant Indices",
+    "Easy",
+    "count-dominant-indices"
+  ],
+  "4213": [
+    "Merge Adjacent Equal Elements",
+    "Medium",
+    "merge-adjacent-equal-elements"
+  ],
+  "4211": [
+    "Count Subarrays With Cost Less Than or Equal to K",
+    "Medium",
+    "count-subarrays-with-cost-less-than-or-equal-to-k"
+  ],
+  "4202": [
+    "Maximum Score Using Exactly K Pairs",
+    "Hard",
+    "maximum-score-using-exactly-k-pairs"
+  ],
+  "4228": [
+    "Delayed Count of Equal Elements",
+    "Medium",
+    "delayed-count-of-equal-elements"
   ]
 }
