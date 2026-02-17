@@ -1,5 +1,7 @@
 # LeetCode Solutions
 
+[![Workflow Status](https://github.com/codewithme-py/LeetCode_solutions/actions/workflows/update-readme.yml/badge.svg)](https://github.com/codewithme-py/LeetCode_solutions/actions/workflows/update-readme.yml)
+
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
@@ -125,7 +127,7 @@ python3 scripts/update_readme.py --force-refresh-cache
 #### 7. Используй скрипт → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
 
 ```bash
-make problem <номер_задачи>
+make problem <номер_задачи_без_ведущих_нулей>
 ```
 
 1) Скрипт создает новую **/feat** ветку, а так же файлы решения и тестов минимизируя рутину
