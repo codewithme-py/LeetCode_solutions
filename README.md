@@ -5,9 +5,9 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **13**  
+✅ **Total**: **14**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
-🟡 **Medium**: 7 &nbsp; `░░░░░░░░░░` &nbsp; _(0.3%)_  
+🟡 **Medium**: 8 &nbsp; `░░░░░░░░░░` &nbsp; _(0.4%)_  
 🔴 **Hard**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_
 <!-- END_STATS -->
 
@@ -31,6 +31,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | [`integer_to_roman_0012.py`](solutions/integer_to_roman_0012.py) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | [`roman_to_integer_0013.py`](solutions/roman_to_integer_0013.py) |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | [`longest_common_prefix_0014.py`](solutions/longest_common_prefix_0014.py) |
+| 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | [`generate_parentheses_0022.py`](solutions/generate_parentheses_0022.py) |
 | 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | [`remove_duplicates_from_sorted_list_0083.py`](solutions/remove_duplicates_from_sorted_list_0083.py) |
 </details>
 <!-- END_TABLE -->
