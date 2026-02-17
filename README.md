@@ -85,46 +85,33 @@ git clone https://github.com/codewithme-py/LeetCode_solutions.git
 cd LeetCode_solutions
 ```
 
-#### 2. Создай и активируй виртуальное окружение
+#### 2. Настрой окружение
 ```bash
-python3 -m venv .venv
-```
-Linux/Mac
-```bash
-source .venv/bin/activate
-```
-или на Windows
-```bash
-source .venv\Scripts\activate
+uv sync
 ```
 
-#### 3. Установи зависимости
+#### 3. Запусти тесты (проверь, что всё работает)
 ```bash
-pip install -e .[dev]
+uv run pytest && uv run ruff check .
 ```
 
-#### 4. Запусти тесты (проверь, что всё работает)
+#### 4. Используй скрипт обновления README (опционально)
 ```bash
-pytest && ruff check .
-```
-
-#### 5. Используй скрипт обновления README (опционально)
-```bash
-python3 scripts/update_readme.py
+uv run scripts/update_readme.py
 ```
 Для принудительного обновления кэша задач используйте флаг `--force-refresh-cache`:
 ```bash
-python3 scripts/update_readme.py --force-refresh-cache
+uv run scripts/update_readme.py --force-refresh-cache
 ```
 
 - Кэш задач обновляется автоматически раз в неделю (от даты изменения файла problems_cache.json). Для принудительного обновления кэша задач используйте флаг --force-refresh-cache:
 
-#### 6. Создай токен GitHub и добавь его в Secrets репозитория
+#### 5. Создай токен GitHub и добавь его в Secrets репозитория
 1) https://github.com/settings/tokens → перейди по ссылке
 2) Generate new token (classic) → Note: `What’s this token for?` → Expiration: `your choice` → Scopes: `repo`+`workflow` → Generate token → Скопируй токен
 3) Repo LeetCode_solutions Settings → Secrets and variables → Actions → New repository secret с именем `GH_PAT` → Вставь токен → Add secret
 
-#### 7. Используй скрипт → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
+#### 6. Используй скрипт → Решай новую задачу → делай push → PR → merge в main → CI/CD сделает всё остальное автоматически!
 
 ```bash
 make problem <номер_задачи_без_ведущих_нулей>
