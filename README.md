@@ -3,9 +3,9 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **12**  
+✅ **Total**: **13**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
-🟡 **Medium**: 6 &nbsp; `░░░░░░░░░░` &nbsp; _(0.3%)_  
+🟡 **Medium**: 7 &nbsp; `░░░░░░░░░░` &nbsp; _(0.3%)_  
 🔴 **Hard**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_
 <!-- END_STATS -->
 
@@ -24,6 +24,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | [`longest_palindromic_substring_0005.py`](solutions/longest_palindromic_substring_0005.py) |
 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | [`zigzag_conversion_0006.py`](solutions/zigzag_conversion_0006.py) |
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | [`reverse_integer_0007.py`](solutions/reverse_integer_0007.py) |
+| 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-(atoi)/) | Medium | [`string_to_integer__atoi_0008.py`](solutions/string_to_integer__atoi_0008.py) |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | [`palindrome_number_0009.py`](solutions/palindrome_number_0009.py) |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | [`integer_to_roman_0012.py`](solutions/integer_to_roman_0012.py) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | [`roman_to_integer_0013.py`](solutions/roman_to_integer_0013.py) |
