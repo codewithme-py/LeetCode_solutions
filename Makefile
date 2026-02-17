@@ -5,3 +5,4 @@ problem:
 		exit 1; \
 	fi
 	@uv run scripts/create_problem.py $(filter-out problem,$(MAKECMDGOALS))
+	
