@@ -4,4 +4,4 @@ problem:
 		echo 'Usage: make problem <problem_number>'; \
 		exit 1; \
 	fi
-	@python scripts/create_problem.py $(filter-out problem,$(MAKECMDGOALS))
+	@uv run scripts/create_problem.py $(filter-out problem,$(MAKECMDGOALS))
