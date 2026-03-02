@@ -19183,5 +19183,115 @@
     "Delayed Count of Equal Elements",
     "Medium",
     "delayed-count-of-equal-elements"
+  ],
+  "4216": [
+    "Weighted Word Mapping",
+    "Easy",
+    "weighted-word-mapping"
+  ],
+  "4137": [
+    "Number of Prefix Connected Groups",
+    "Medium",
+    "number-of-prefix-connected-groups"
+  ],
+  "4062": [
+    "House Robber V",
+    "Medium",
+    "house-robber-v"
+  ],
+  "4209": [
+    "Palindromic Path Queries in a Tree",
+    "Hard",
+    "palindromic-path-queries-in-a-tree"
+  ],
+  "4212": [
+    "Toggle Light Bulbs",
+    "Easy",
+    "toggle-light-bulbs"
+  ],
+  "4217": [
+    "First Element with Unique Frequency",
+    "Medium",
+    "first-element-with-unique-frequency"
+  ],
+  "4221": [
+    "Longest Almost-Palindromic Substring",
+    "Medium",
+    "longest-almost-palindromic-substring"
+  ],
+  "4204": [
+    "Maximum Subarray XOR with Bounded Range",
+    "Hard",
+    "maximum-subarray-xor-with-bounded-range"
+  ],
+  "4170": [
+    "Total Distance to Type a String Using One Finger",
+    "Medium",
+    "total-distance-to-type-a-string-using-one-finger"
+  ],
+  "4224": [
+    "Find the Score Difference in a Game",
+    "Medium",
+    "find-the-score-difference-in-a-game"
+  ],
+  "4226": [
+    "Check Digitorial Permutation",
+    "Medium",
+    "check-digitorial-permutation"
+  ],
+  "4044": [
+    "Maximum Bitwise XOR After Rearrangement",
+    "Medium",
+    "maximum-bitwise-xor-after-rearrangement"
+  ],
+  "4065": [
+    "Count Sequences to K",
+    "Hard",
+    "count-sequences-to-k"
+  ],
+  "4250": [
+    "Maximum Requests Without Violating the Limit",
+    "Medium",
+    "maximum-requests-without-violating-the-limit"
+  ],
+  "4231": [
+    "Smallest Pair With Different Frequencies",
+    "Easy",
+    "smallest-pair-with-different-frequencies"
+  ],
+  "4013": [
+    "Merge Close Characters",
+    "Medium",
+    "merge-close-characters"
+  ],
+  "4219": [
+    "Minimum Operations to Make Array Parity Alternating",
+    "Medium",
+    "minimum-operations-to-make-array-parity-alternating"
+  ],
+  "4239": [
+    "Sum of K-Digit Numbers in a Range",
+    "Hard",
+    "sum-of-k-digit-numbers-in-a-range"
+  ],
+  "4229": [
+    "Trim Trailing Vowels",
+    "Easy",
+    "trim-trailing-vowels"
+  ],
+  "4024": [
+    "Minimum Cost to Split into Ones",
+    "Medium",
+    "minimum-cost-to-split-into-ones"
+  ],
+  "4161": [
+    "Minimum Bitwise OR From Grid",
+    "Medium",
+    "minimum-bitwise-or-from-grid"
+  ],
+  "4002": [
+    "Count Subarrays With K Distinct Integers",
+    "Hard",
+    "count-subarrays-with-k-distinct-integers"
   ]
 }
