@@ -5,10 +5,10 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **15**  
+✅ **Total**: **16**  
 🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
 🟡 **Medium**: 9 &nbsp; `░░░░░░░░░░` &nbsp; _(0.4%)_  
-🔴 **Hard**: 1 &nbsp; `░░░░░░░░░░` &nbsp; _(0.1%)_
+🔴 **Hard**: 2 &nbsp; `░░░░░░░░░░` &nbsp; _(0.2%)_
 <!-- END_STATS -->
 
 <!-- START_TABLE -->
@@ -34,6 +34,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | [`generate_parentheses_0022.py`](solutions/generate_parentheses_0022.py) |
 | 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | [`remove_duplicates_from_sorted_list_0083.py`](solutions/remove_duplicates_from_sorted_list_0083.py) |
 | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | [`minimum_size_subarray_sum_0209.py`](solutions/minimum_size_subarray_sum_0209.py) |
+| 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | [`sliding_window_maximum_0239.py`](solutions/sliding_window_maximum_0239.py) |
 </details>
 <!-- END_TABLE -->
 
