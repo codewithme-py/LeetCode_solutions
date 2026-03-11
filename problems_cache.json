@@ -19293,5 +19293,35 @@
     "Count Subarrays With K Distinct Integers",
     "Hard",
     "count-subarrays-with-k-distinct-integers"
+  ],
+  "4241": [
+    "Unique Email Groups",
+    "Medium",
+    "unique-email-groups"
+  ],
+  "4247": [
+    "Minimum Capacity Box",
+    "Easy",
+    "minimum-capacity-box"
+  ],
+  "4240": [
+    "Find the Smallest Balanced Index",
+    "Medium",
+    "find-the-smallest-balanced-index"
+  ],
+  "4220": [
+    "Minimum Operations to Sort a String",
+    "Medium",
+    "minimum-operations-to-sort-a-string"
+  ],
+  "4192": [
+    "Minimum Cost to Partition a Binary String",
+    "Hard",
+    "minimum-cost-to-partition-a-binary-string"
+  ],
+  "4261": [
+    "Reverse K Subarrays",
+    "Medium",
+    "reverse-k-subarrays"
   ]
 }
