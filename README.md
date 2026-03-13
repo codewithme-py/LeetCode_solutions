@@ -5,8 +5,8 @@
 My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 
 <!-- START_STATS -->
-✅ **Total**: **17**  
-🟢 **Easy**: 5 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
+✅ **Total**: **18**  
+🟢 **Easy**: 6 &nbsp; `░░░░░░░░░░` &nbsp; _(0.6%)_  
 🟡 **Medium**: 10 &nbsp; `░░░░░░░░░░` &nbsp; _(0.5%)_  
 🔴 **Hard**: 2 &nbsp; `░░░░░░░░░░` &nbsp; _(0.2%)_
 <!-- END_STATS -->
@@ -34,6 +34,7 @@ My clean, typed, and tested solutions to LeetCode problems (Python 3.10+).
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | [`generate_parentheses_0022.py`](solutions/generate_parentheses_0022.py) |
 | 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | [`remove_duplicates_from_sorted_list_0083.py`](solutions/remove_duplicates_from_sorted_list_0083.py) |
 | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | [`minimum_size_subarray_sum_0209.py`](solutions/minimum_size_subarray_sum_0209.py) |
+| 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | [`contains_duplicate_ii_0219.py`](solutions/contains_duplicate_ii_0219.py) |
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | [`sliding_window_maximum_0239.py`](solutions/sliding_window_maximum_0239.py) |
 | 438 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Medium | [`find_all_anagrams_in_a_string_0438.py`](solutions/find_all_anagrams_in_a_string_0438.py) |
 </details>
